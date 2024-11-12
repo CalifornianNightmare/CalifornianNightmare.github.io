@@ -32,3 +32,14 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// Function to update background position for slow scroll effect
+// JavaScript for parallax effect
+window.addEventListener('scroll', function () {
+    const sideNavBackground = document.querySelector('.body-bg');
+    const scrollPosition = window.scrollY;
+
+    if (sideNavBackground) {
+        sideNavBackground.style.backgroundPositionY = `${scrollPosition * 0.5}px`; // Slow scroll effect
+    }
+});
